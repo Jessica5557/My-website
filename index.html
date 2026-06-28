@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <nav>
+        <ul class="topnav" id="dropdowclick">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+            <li class="topnav left"><a href="#signin">Sign In</a></li>
+            <li class="topnav left"><a href="#signup">Sign Up</a></li>
+            <li class="dropdownicon" href="" onclick="myFunction()"><a href="javascript:void(0);"> &#9776;</a></li>
+        </ul>
+    </nav>
+
+
+    <header class="hero" id="home">
+        <div class="hero-text">
+            <p class="small-title">Welcome to my blog</p>
+            <h1>Simple stories, ideas, and updates.</h1>
+            <p>Read short posts, learn new things, and keep up with my latest work.</p>
+            <a class="button" href="#news">Explore Posts</a>
+        </div>
+        <div class="hero-box">
+            <span>My Blog</span>
+        </div>
+    </header>
+
+    <main>
+        <section class="container" id="news">
+            <h2>Latest Posts</h2>
+            <div class="card-row">
+                <article class="card">
+                    <div class="card-image blue"></div>
+                    <h3>First Blog Post</h3>
+                    <p>A short introduction to the things I want to write about.</p>
+                </article>
+
+                <article class="card">
+                    <div class="card-image orange"></div>
+                    <h3>My Web Journey</h3>
+                    <p>Learning HTML and CSS one simple page at a time.</p>
+                </article>
+
+                <article class="card">
+                    <div class="card-image green"></div>
+                    <h3>New Ideas</h3>
+                    <p>Small creative thoughts and updates from my projects.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="about-section" id="about">
+            <div>
+                <h2>About This Page</h2>
+                <p>This is a simple responsive webpage design with a navigation bar, welcome section, blog cards, and a contact form.</p>
+            </div>
+        </section>
+
+        <section class="container contact-section" id="contact">
+            <h2>Contact Me</h2>
+            <form>
+                <input type="text" placeholder="Your name">
+                <input type="email" placeholder="Your email">
+                <textarea placeholder="Your message"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>My Blog &copy; 2026</p>
+    </footer>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("dropdowclick");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</body>
+</html>

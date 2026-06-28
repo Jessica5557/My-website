@@ -1,0 +1,290 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #fff4f7;
+    color: #2f2427;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+nav,
+header,
+main,
+section,
+footer {
+    display: block;
+}
+
+/* ####### nav bar ######### */
+nav {
+    width: 100%;
+    margin: 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0 24px;
+    overflow: hidden;
+    background-color: #8d2f36;
+    box-shadow: 0 2px 10px rgba(42, 18, 22, 0.2);
+}
+
+nav ul li {
+    float: left;
+    list-style-type: none;
+    text-transform: uppercase;
+}
+
+ul.topnav li a {
+    display: block;
+    color: #fff9f9;
+    text-align: center;
+    padding: 16px 14px;
+    text-decoration: none;
+    min-height: 17px;
+    font-size: 14px;
+    letter-spacing: 0;
+}
+
+ul.topnav li.left {
+    float: right;
+}
+
+ul.topnav li a:hover {
+    background-color: #f2b84b;
+    color: #2f2427;
+}
+
+ul.topnav li.dropdownicon {
+    display: none;
+}
+
+.hero {
+    min-height: 420px;
+    padding: 70px 8%;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 30px;
+    align-items: center;
+    background: linear-gradient(135deg, #ffe5eb, #fff8ef);
+}
+
+.hero-text {
+    max-width: 620px;
+}
+
+.small-title {
+    margin: 0 0 10px;
+    color: #8d2f36;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+h1 {
+    margin: 0 0 15px;
+    font-size: 48px;
+    line-height: 1.1;
+    color: #3a2025;
+}
+
+h2 {
+    margin: 0 0 22px;
+    text-align: center;
+    color: #3a2025;
+}
+
+h3 {
+    margin: 14px 0 8px;
+    color: #3a2025;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 24px;
+}
+
+.button,
+button {
+    display: inline-block;
+    border: 0;
+    border-radius: 6px;
+    background: #8d2f36;
+    color: white;
+    padding: 12px 18px;
+    text-decoration: none;
+    font: inherit;
+    cursor: pointer;
+}
+
+.button:hover,
+button:hover {
+    background: #6f242a;
+}
+
+.hero-box {
+    min-height: 260px;
+    border-radius: 8px;
+    background:
+        linear-gradient(rgba(141, 47, 54, 0.84), rgba(141, 47, 54, 0.84)),
+        repeating-linear-gradient(45deg, #f2b84b 0 18px, #f7d88a 18px 36px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 18px 40px rgba(42, 18, 22, 0.18);
+}
+
+.hero-box span {
+    color: white;
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 55px 20px;
+}
+
+.card-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 8px 22px rgba(42, 18, 22, 0.1);
+}
+
+.card p {
+    margin: 0;
+}
+
+.card-image {
+    height: 120px;
+    border-radius: 6px;
+}
+
+.blue {
+    background: #6ca6d9;
+}
+
+.orange {
+    background: #f2b84b;
+}
+
+.green {
+    background: #6fbf8f;
+}
+
+.about-section {
+    background: #3a2025;
+    color: #fff4f7;
+    padding: 50px 8%;
+    text-align: center;
+}
+
+.about-section div {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.about-section h2 {
+    color: white;
+}
+
+.contact-section form {
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+input,
+textarea {
+    width: 100%;
+    display: block;
+    margin-bottom: 12px;
+    padding: 13px;
+    border: 1px solid #e6c9ce;
+    border-radius: 6px;
+    font: inherit;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+footer {
+    background: #8d2f36;
+    color: white;
+    text-align: center;
+    padding: 18px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* ########## MOBILE ########### */
+@media screen and (max-width: 760px) {
+    nav ul {
+        padding: 0;
+    }
+
+    nav ul li:not(:first-child) {
+        display: none;
+    }
+
+    ul.topnav li.dropdownicon {
+        float: right;
+        display: block;
+    }
+
+    ul.topnav.responsive {
+        position: relative;
+    }
+
+    ul.topnav.responsive li.dropdownicon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    ul.topnav.responsive li {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    ul.topnav.responsive li a {
+        text-align: left;
+        display: block;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 45px 20px;
+    }
+
+    h1 {
+        font-size: 34px;
+    }
+
+    .hero-box {
+        min-height: 180px;
+    }
+
+    .card-row {
+        grid-template-columns: 1fr;
+    }
+}
